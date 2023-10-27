@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* --- Header ---- */
+.header {
+    background-color: red;
+}
+
+nav {
+    background-color: aqua;
+    height: 55px;
+}
+
+.header .portada {
+    background-color: green;
+    height: 65vh;
+}
+
+/* --- Main --- */
+
+.services {
+    background-color: blue;
+    height: 450px;
+}
+
+.about-us {
+    background-color: greenyellow;
+    height: 450px;
+}
+
+.purpose {
+    background-color: purple;
+    height: 450px;
+}
+
+.contact {
+    background-color: rgb(62, 203, 246);
+    height: 450px;
+}
+
+.social {
+    background-color: aquamarine;
+    height: 450px;
+}
+
+.portal {
+    background-color: gray;
+    height: 230px;
+}
+
+/* --- Footer --- */
+
+.footer {
+    background-color: rgb(56, 52, 52);
+    height: 50px;
+}
