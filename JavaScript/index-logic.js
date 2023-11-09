@@ -59,6 +59,6 @@ function closeModal(id) {
  */
 function openPQRPage() {
     // Abrir una nueva página en una nueva ventana o pestaña
-    window.open("../contact-page.html", "_blank");
+    window.open("../contact.html", "_blank");
 
 }
