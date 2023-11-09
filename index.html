@@ -8,15 +8,29 @@
     <meta name="description" content="Clínica especializada en atención médica">
     <meta name="keywords" content="salud, ips, medicina">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="index.js"></script>
+    <script src="util.js"></script>
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="home">
 
-        <!-- Barra de navegación -->
         <nav role="nav">
-            <!-- Espacio para la barra de navegación -->
+            <img class="logo" src="icons/icon_santa_fe_ips_small.png" alt="icono Santa Fe ips">
+            <div class="menu-button" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <ul class="menu">
+                <li><a class="nav-btn-behavior" href="#home">Inicio</a></li>
+                <li><a class="nav-btn-behavior" href="#service">Servicios</a></li>
+                <li><a class="nav-btn-behavior" href="#about-us">Sobre Nosotros</a></li>
+                <li><a class="nav-btn-behavior" href="https://www.google.com/?client=safari">Galería</a></li>
+                <li><a class="nav-btn-behavior" href="#contact">Contactar</a></li>
+                <li><a class="nav-btn-behavior" href="https://www.google.com/?client=safari">Conceptos</a></li>
+            </ul>
+
         </nav>
 
         <!-- Imagen de portada -->
@@ -45,7 +59,7 @@
         </div>
 
         <!-- Sección de portafolio -->
-        <section class="services">
+        <section class="services" id="service">
 
             <div class="services__title">
                 <h2>Nuestros servicios</h2>
@@ -54,112 +68,237 @@
 
             <section class="services__container">
 
-                <div class="services__contariner_card">
+                <!-- FIRST SERVICE -->
+                <div class="services__card-container" onclick="openModal('first_service_modal')">
                     <img src="images/service-consultation.jpeg" alt="">
-                    <div class="services__contariner_card-body">
+                    <div class="services__card-body">
                         <h3>Consulta médica especializada</h3>
-                        <p>Incluye examen médico completo, realizado por especialistas brindando valoración de signos
-                            vitales, sistema osteomuscular, vascular periférico, fiel y faneras </p>
                     </div>
                 </div>
 
-                <div class="services__contariner_card">
+                <div class="modal__container" id="first_service_modal" onclick="closeModal('first_service_modal')">
+                    <div class="modal" onclick="event.stopPropagation()">
+                        <!-- <button onclick="closeModal('first_service_modal')"><img src="./icons/icone-close.png" -->
+                        <!-- alt=""></button> -->
+                        <div class="button-close-modal" onclick="closeModal('first_service_modal')"><img
+                                src="./icons/icone-close-noir.png" alt=""></div>
+                        <img src="images/service-consultation.jpeg" alt="">
+                        <h3>Consulta médica especializada</h3>
+                        <p>Esta consulta incluye examen médico completo, realizado por médico especialista en salud
+                            ocupacional con valoración de signos vitales, valoración de sistemas osteomuscular, vascular
+                            periférico, piel y fareras, y los anexos requeridos de acuerdo al perfil y requerimientos
+                            del cargo y profesiograma</p>
+                    </div>
+                </div>
+
+                <!-- SECOND SERVICE -->
+                <div class="services__card-container" onclick="openModal('second_service_modal')">
                     <img src="images/service-audiometry.jpeg" alt="">
-                    <div class="services__contariner_card-body">
+                    <div class="services__card-body">
                         <h3>Audiometría</h3>
-                        <p>Es un examen que mide el nivel de audición que presenta el paciente en cada unos de sus
-                            oídos.</p>
                     </div>
                 </div>
-                <div class="services__contariner_card">
+                <div class="modal__container" id="second_service_modal" onclick="closeModal('second_service_modal')">
+                    <div class="modal" onclick="event.stopPropagation()">
+                        <div class="button-close-modal" onclick="closeModal('second_service_modal')"><img
+                                src="./icons/icone-close-noir.png" alt=""></div>
+                        <img src="images/service-audiometry.jpeg" alt="">
+                        <h3>Audiometría</h3>
+                        <p>Es un examen que mide el nivel de audición que presenta el paciente en cada uno de sus oídos.
+                            El objetivo de la audiometría ocupacional es cifrar las alteraciones de la audición por
+                            riesgos de exposición a ruidos en el trabajo</p>
+                    </div>
+                </div>
+
+
+                <!-- THIRD SERVICE -->
+                <div class="services__card-container" onclick="openModal('third_service_modal')">
                     <img src="images/service-visiometry.jpeg" alt="">
-                    <div class="services__contariner_card-body">
+                    <div class="services__card-body">
                         <h3>Visiometría</h3>
-                        <p>Valora la capacidad visual del individuo, incluye la capacidad de visión a distancia y cerca,
-                            percepción de los colores, profundidad y balance muscular básico</p>
                     </div>
                 </div>
-                <div class="services__contariner_card">
+                <div class="modal__container" id="third_service_modal" onclick="closeModal('third_service_modal')">
+                    <div class="modal" onclick="event.stopPropagation()">
+                        <div class="button-close-modal" onclick="closeModal('third_service_modal')"><img
+                                src="./icons/icone-close-noir.png" alt=""></div>
+                        <img src="images/service-visiometry.jpeg" alt="">
+                        <h3>Visiometría</h3>
+                        <p>Es una prueba tamiz utilizada para valorar la capacidad visual del individuo, incluyendo la
+                            capacidad de visión a distancia y de cerca, la capacidad para percepción de los colores, de
+                            profundidad y balance muscular básico; permitiendo clasificar la severidad de los defectos
+                            ópticos e identificando a quienes requieren exámenes complementarios con mayor prontitud</p>
+                    </div>
+                </div>
+
+
+                <!-- FOURTH SERVICE -->
+                <div class="services__card-container" onclick="openModal('fourth_service_modal')">
                     <img src="images/service-optometry.jpeg" alt="">
-                    <div class="services__contariner_card-body">
+                    <div class="services__card-body">
                         <h3>Optometría</h3>
-                        <p>Determina el estado visual del trabajador y da un diagnóstico preciso oportuno de la
-                            condición visual del trabajador e indicar una conducta apropiada a seguir en cada caso</p>
+                    </div>
+                </div>
+                <div class="modal__container" id="fourth_service_modal" onclick="closeModal('fourth_service_modal')">
+                    <div class="modal" onclick="event.stopPropagation()">
+                        <div class="button-close-modal" onclick="closeModal('fourth_service_modal')"><img
+                                src="./icons/icone-close-noir.png" alt=""></div>
+                        <img src="images/service-optometry.jpeg" alt="">
+                        <h3>Optometría</h3>
+                        <p>Es la evaluación visual refracta y del estado ocular del individuo como trabajador, teniendo
+                            en cuenta los requerimientos visuales exigidos por la tarea que desempeñe y los riesgos
+                            ocupacionales a los que está expuesto.</p>
+                        <p>El objetivo principal es determinar si el estado visual refractado del trabajador es óptimo
+                            y está acorde con los requerimientos visuales del puesto de trabajo y dar un diagnóstico
+                            preciso oportuno de la condición visual del trabajador e indicar una conducta apropiada a
+                            seguir en cada caso</p>
                     </div>
                 </div>
 
-                <div class="services__contariner_card">
+
+                <!-- FIFTH SERVICE -->
+                <div class="services__card-container" onclick="openModal('fifth_service_modal')">
                     <img src="images/service-clinical-laboratory.jpeg" alt="">
-                    <div class="services__contariner_card-body">
+                    <div class="services__card-body">
                         <h3>Laboratorio Clínico</h3>
-                        <p>Se realiza este examen de acuerdo a las necesidades ocupacionales de las empresas y los
-                            riesgos a los que se encuentran expuestos los trabajadores</p>
+
+                    </div>
+                </div>
+                <div class="modal__container" id="fifth_service_modal" onclick="closeModal('fifth_service_modal')">
+                    <div class="modal" onclick="event.stopPropagation()">
+                        <div class="button-close-modal" onclick="closeModal('fifth_service_modal')"><img
+                                src="./icons/icone-close-noir.png" alt=""></div>
+                        <img src="images/service-clinical-laboratory.jpeg" alt="">
+                        <h3>Optometría</h3>
+                        <p>Este es realizado de acuerdo a las necesidades ocupacionales de las empresas y los riesgos a
+                            los que se encuentran expuestos los trabajadores</p>
                     </div>
                 </div>
 
 
-                <div class="services__contariner_card">
+                <!-- SIXTH SERVICE -->
+                <div class="services__card-container" onclick="openModal('sixth_service_modal')">
                     <img src="images/service-spirometry.jpeg" alt="">
-                    <div class="services__contariner_card-body">
+                    <div class="services__card-body">
                         <h3>Espirometría</h3>
-                        <p>Prueba médica de tamízate que permite evaluación la función pulmonar. Se realiza mediante el
-                            uso de un espirómetro, dispositivo especializado que registra la cantidad de aire que un
-                            sujeto inhala o exhala </p>
+                    </div>
+                </div>
+                <div class="modal__container" id="sixth_service_modal" onclick="closeModal('sixth_service_modal')">
+                    <div class="modal" onclick="event.stopPropagation()">
+                        <div class="button-close-modal" onclick="closeModal('sixth_service_modal')"><img
+                                src="./icons/icone-close-noir.png" alt=""></div>
+                        <img src="images/service-spirometry.jpeg" alt="">
+                        <h3>Espirometría</h3>
+                        <p>EPrueba médica de tamizaje que permite evaluar la función pulmonar. Se realiza mediante el
+                            uso de un espirómetro, el cual es un dispositivo especial que registra la cantidad de aire
+                            que un sujeto inhala p exhala</p>
                     </div>
                 </div>
 
 
-                <div class="services__contariner_card">
+
+                <!-- SEVENTH SERVICE -->
+                <div class="services__card-container" onclick="openModal('seventh_service_modal')">
                     <img src="images/service-electrocardiogram.jpeg" alt="">
-                    <div class="services__contariner_card-body">
+                    <div class="services__card-body">
                         <h3>Electrocardiograma</h3>
-                        <p>Prueba que registra la actividad eléctrica del corazón que se produce en cada latido
-                            cardiaco. Esta actividad es registrada gráficamente en un papel donde se representan los
-                            estímulos eléctricos de las aurículas y ventrículos</p>
                     </div>
                 </div>
-
-
-                <div class="services__contariner_card">
-                    <img src="images/service-psychological-test.jpeg" alt="">
-                    <div class="services__contariner_card-body">
-                        <h3>Pruebas Psicológicas</h3>
-                        <p>Evalúa a los trabajadores, por medio de entrevistas y aplicación de pruebas psicológicas, los
-                            diferentes aspectos (cognitivos, emocionales, entre otros) que influyen en el desempeño y
-                            adaptación laboral del trabajador.
-                            Las pruebas realizadas siempre son acordes con los riesgos presentes en el área de trabajo
+                <div class="modal__container" id="seventh_service_modal" onclick="closeModal('seventh_service_modal')">
+                    <div class="modal" onclick="event.stopPropagation()">
+                        <div class="button-close-modal" onclick="closeModal('seventh_service_modal')"><img
+                                src="./icons/icone-close-noir.png" alt=""></div>
+                        <img src="images/service-electrocardiogram.jpeg" alt="">
+                        <h3>Electrocardiograma</h3>
+                        <p>Es una prueba que registra la actividad eléctrica del corazón que se produce en cada latido
+                            cardiaco. Esta actividad eléctrica se registra desde la superficie corporal del paciente y
+                            se dibuja en un papel mediante una representación gráfica o trazado, donde se observan
+                            diferentes ondas que representan los estímulos eléctricos de las aurículas y los ventrículos
                         </p>
                     </div>
                 </div>
 
-                <div class="services__contariner_card">
-                    <img src="images/service-diagnostic-imaging-2.jpeg" alt="">
-                    <div class="services__contariner_card-body">
-                        <h3>Imágenes Diagnósticas</h3>
-                        <p>El conjunto de estudios, que mediante la tecnología, obtienen y procesan imágenes del cuerpo
-                            humano, estas se realizan de acuerdo a los requerimientos solicitados.</p>
+                <!-- EIGHTH SERVICE -->
+                <div class="services__card-container" onclick="openModal('eighth_service_modal')">
+                    <img src="images/service-psychological-test.jpeg" alt="">
+                    <div class="services__card-body">
+                        <h3>Pruebas Psicológicas</h3>
+                    </div>
+                </div>
+                <div class="modal__container" id="eighth_service_modal" onclick="closeModal('eighth_service_modal')">
+                    <div class="modal" onclick="event.stopPropagation()">
+                        <div class="button-close-modal" onclick="closeModal('eighth_service_modal')"><img
+                                src="./icons/icone-close-noir.png" alt=""></div>
+                        <img src="images/service-psychological-test.jpeg" alt="">
+                        <h3>Pruebas psicológicas</h3>
+                        <p>Evalúa a los trabajadores, por medio de entrevistas y aplicación de pruebas psicológicas, los
+                            diferentes aspectos (cognitivos, emocionales, entre otros) que influyen en el desempeño y la
+                            adaptación laboral del trabajador.</p>
+                        <p>Las pruebas realizadas siempre son acordes con los riesgos presentes en el área de trabajo
+                        </p>
                     </div>
                 </div>
 
-
-            </section>
-
-            <section class="services__other-services">
-                <div class="other-services__title">
-                    <h2>Otros Servicios</h2>
-                    <p>Conozca un poco más de los servicios profesionales que ofrecemos tenemos a disposición para su
-                        empresa</p>
+                <!-- NINETH SERVICE -->
+                <div class="services__card-container" onclick="openModal('nineth_service_modal')">
+                    <img src="images/service-diagnostic-imaging-2.jpeg" alt="">
+                    <div class="services__card-body">
+                        <h3>Imágenes Diagnósticas</h3>
+                    </div>
+                </div>
+                <div class="modal__container" id="nineth_service_modal" onclick="closeModal('nineth_service_modal')">
+                    <div class="modal" onclick="event.stopPropagation()">
+                        <div class="button-close-modal" onclick="closeModal('nineth_service_modal')"><img
+                                src="./icons/icone-close-noir.png" alt=""></div>
+                        <img src="images/service-diagnostic-imaging-2.jpeg" alt="">
+                        <h3>Imágenes Diagnósticas</h3>
+                        <p>El conjunto de estudios, que mediante la tecnología, obtienen y procesan imágenes del cuerpo
+                            humano, estas se realizan de acuerdo a los requerimientos solicitados</p>
+                    </div>
                 </div>
 
-                <div>
-                    <!-- Espacio para agregar los otros servicios -->
+                <!-- OTHER SERVICE -->
+                <div class="services__card-container" onclick="openModal('tenth_service_modal')">
+                    <img src="images/business-training.jpeg" alt="">
+                    <div class="services__card-body">
+                        <h3>Otros Servicios</h3>
+                    </div>
                 </div>
+                <div class="modal__container" id="tenth_service_modal" onclick="closeModal('tenth_service_modal')">
+                    <div class="modal" onclick="event.stopPropagation()">
+                        <div class="button-close-modal" onclick="closeModal('tenth_service_modal')"><img
+                                src="./icons/icone-close-noir.png" alt=""></div>
+                        <img src="images/collage_other_services.png" alt="">
+                        <h3>Otros Servicios</h3>
+                        <p>Conozca un poco más de los servicios profesionales que ofrecemos tenemos a disposición para
+                            su empresa:</p>
+                        <ul>
+                            <li>
+                                <p>Manipulación de alimentos</p>
+                            </li>
+                            <li>
+                                <p>Capacitaciones empresariales</p>
+                            </li>
+                            <li>
+                                <p>Auditorías internas de sistemas y gestión</p>
+                            </li>
+                            <li>
+                                <p>Asesorías jurídicas</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
             </section>
 
         </section>
 
+        <hr>
+
+
         <!-- Sección de sobre nosotros-->
-        <section class="about-us">
+        <section class="about-us" id="about-us">
 
             <div class="about-us__text">
                 <h2>¿Quienes somos?</h2>
@@ -173,48 +312,101 @@
                     donde esperamos generar soluciones efectivas y oportunas en cuanto a salud para sus empresas.</p>
             </div>
             <div class="about-us__photo">
-                <img src="" alt="">
+                <img src="images/doctor.png" alt="">
             </div>
 
         </section>
 
         <!-- Sección de propósito -->
         <section class="purpose">
-            <h2>Nuestro propósito</h2>
-            <div>
-                <h3>Misión</h3>
-                <p>Prestar nuestros servicios de Medicina laboral y salud Ocupacional de manera, eficiente, humana,
-                    oportuna y comprometida a mantener y preservar la salud de nuestros usuarios, respaldados por un
-                    equipo de profesionales altamente calificados y una excelente infraestructura que nos permite
-                    garantizar alto grado de confiabilidad, satisfacción y el mejoramiento continuo de nuestra
-                    organización.</p>
+
+            <div class="purpose__title">
+                <h2>Nuestro propósito</h2>
+                <p>Conoce nuestro propósito como empresa</p>
             </div>
-            <div>
-                <h3>Propósito</h3>
-                <p>Ser una IPS líder reconocida por nuestro excelente servicio, calidez humana, eficiencia,
-                    credibilidad y confiabilidad en la prestación de servicios de Medicina laboral y Salud ocupacional
-                    a las empresas de todos los sectores económicos de la región Orinoquia.</p>
-            </div>
+
+            <section class="purposes">
+
+                <div class="purpose__item">
+                    <h3>Misión</h3>
+                    <p>Prestar nuestros servicios de medicina laboral y salud ocupacional de manera, eficiente, humana,
+                        oportuna y comprometida a mantener y preservar la salud de nuestros usuarios, respaldos por un
+                        equipo de profesionales altamente clasificados y una excelente infraestructura que nos permite
+                        garantizar alto grado de confiabilidad, satisfacción y el mejoramiento continuo de nuestra
+                        organización.</p>
+                </div>
+
+                <div class="purpose__item">
+                    <h3>Propósito</h3>
+                    <p>Ser una IPS líder reconocida por nuestro excelente servicio, calidez humana, eficiencia,
+                        credibilidad y confiabilidad en la prestación de servicios de medicina laboral y salud
+                        ocupacional a las empresas de todos los sectores económicos de la región de la Orinoquía. </p>
+                </div>
+
+            </section>
+
         </section>
 
         <section class="social">
             <!-- Espacio para agregar publicaciones de redes sociales -->
         </section>
 
-        <!-- Formulario de contacto -->
-        <section class="contact">
+        <section class="contact" id="contact">
             <!-- Espacio para formulario de contacto -->
-        </section>
+            <div class="contact__title">
+                <h2>Información De Contacto</h2>
+            </div>
 
-        <!-- Portal de descargas -->
-        <section class="portal">
-            <!-- Espacio para conectar con plataforma de descarga -->
+            <div class="contact__body">
+                <div class="contact__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1989.6906223603728!2d-73.64114016294482!3d4.145197277587349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e2de39c154a97%3A0x72079cbccd631c0f!2sPorvenir%20Villavicencio!5e0!3m2!1ses-419!2sco!4v1698773614879!5m2!1ses-419!2sco"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="contact__info">
+
+                    <p>
+                        <img src="icons/location.png" alt="location icon">
+                        <label for="">Ubicación:</label>
+                        <span>Calle 33 No. 38 - 41 Barzal</span>
+                    </p>
+
+                    <p>
+                        <img src="icons/mail.png" alt="location icon">
+                        <label for="">Correo:</label>
+                        <a href="mailto:mailto:someone@yoursite.com" id="info__mail">contacto@santafeips.com</a>
+                    </p>
+
+                    <p>
+                        <img src="icons/phone.png" alt="location icon">
+                        <label for="">Celular:</label>
+                        <span>323 2098 553</span>
+                    </p>
+
+                    <p>
+                        <img src="icons/location.png" alt="location icon">
+                        <label for="">Teléfono: :</label>
+                        <span>(38) 674 0182</span>
+                    </p>
+
+                    <button onclick="openPQRPage()">PQR</button>
+
+                </div>
+
+            </div>
+
         </section>
 
     </main>
 
     <footer class="footer">
-
+        <div>
+            <p>@ 2023 Villavicencio - Meta - Colombia</p>
+        </div>
+        <div>
+            <p><a href="https://systemwork.com.co">Por SystemWork</a></p>
+        </div>
     </footer>
 
 </body>
