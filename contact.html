@@ -6,11 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santa Fe IPS</title>
     <link rel="stylesheet" href="styles/contact-styles.css">
+    <script src="./javascript/contact-logic.js"></script>
 </head>
 
 <body>
+    <!-- 
+    <nav>
+        <img src="icons/return_back.png" alt="arrow pointing left" onclick="returnToHome()">
+    </nav> -->
 
-    <h1>Contact Page</h1>
+    <nav role="nav">
+        <img class="logo" src="icons/icon_santa_fe_ips_small.png" alt="icono Santa Fe ips">
+        <div class="menu-button" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <ul class="menu">
+            <li><a class="nav-btn-behavior" href="./index.html#home">Inicio</a></li>
+            <li><a class="nav-btn-behavior" href="./index.html#service">Servicios</a></li>
+            <li><a class="nav-btn-behavior" href="./index.html#about-us">Sobre Nosotros</a></li>
+            <li><a class="nav-btn-behavior" href="./gallery.html">Galería</a></li>
+            <li><a class="nav-btn-behavior" href="./index.html#contact">Contactar</a></li>
+            <li><a class="nav-btn-behavior" href="https://www.google.com/?client=safari">Conceptos</a></li>
+        </ul>
+
+    </nav>
+
+
+    <section class="contact">
+
+        <div class="contact__title">
+            <h1>Formulario de contacto</h1>
+            <p></p>
+        </div>
+
+        <form class="contact__form" action="./php/sendEmail.php" method="post">
+
+            <div class="form__item">
+                <label for="name">Nombre completo:</label>
+                <input type="text" id="name" name="name" placeholder="nombre...">
+            </div>
+
+            <div class="form__item">
+                <label for="email">correo electrónico:</label>
+                <input type="text" id="email" name="email" placeholder="email...">
+            </div>
+
+            <div class="form__item">
+                <label for="phone">número telefónico:</label>
+                <input type="text" id="phone" name="phone" placeholder="número telefónico">
+            </div>
+
+            <div class="form__item">
+                <label for="reason">Motivo:</label>
+                <select name="reason" id="reason">
+                    <option value="null"> - Selecciona una opción - </option>
+                    <option value="Consulta">Consulta</option>
+                    <option value="Duda">Duda</option>
+                    <option value="Error">Errores técnicos</option>
+                    <option value="Peticion">Petición</option>
+                    <option value="Queja">Queja</option>
+                    <option value="Sugerencia">Sugerencia</option>
+                </select>
+            </div>
+
+            <div class="form__item">
+                <label for="subject">Asunto:</label>
+                <input type="text" placeholder="Asunto" id="subject" name="subject">
+            </div>
+
+            <div class="form__item">
+                <label for="description">Descripción:</label>
+                <textarea name="description" id="description" cols="30" rows="10" placeholder="Descripción..."></textarea>
+            </div>
+
+            <div class="form__item">
+                <label for="terms">Aceptas los términos y condiciones?*<input type="checkbox" name="terms" id="terms">
+                </label>
+            </div>
+
+            <div class="form__item">
+                <button type="submit">Envíar</button>
+            </div>
+
+        </form>
+
+    </section>
 
 </body>
 
