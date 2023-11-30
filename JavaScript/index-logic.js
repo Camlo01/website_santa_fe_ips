@@ -6,21 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("note").style.display = "none";
     });
 
-    // Add functionality for toggle menu when any button is pressed
-    for (var element of document.getElementsByClassName("nav-btn-behavior")) {
-        element.addEventListener("click", toggleMenu);
-    }
-
-
 });
-
-/**
- * Method for toggle the menu button in the navegation bar
- */
-function toggleMenu() {
-    var menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
-}
 
 /**
  * Function in charge to open the modal by its id
@@ -28,7 +14,7 @@ function toggleMenu() {
  */
 function openModal(id) {
 
-    let modalContainer = document.getElementById(id)
+    const modalContainer = document.getElementById(id)
     modalContainer.style.display = 'block';
 
     setTimeout(() => {
@@ -44,7 +30,7 @@ function openModal(id) {
  */
 function closeModal(id) {
 
-    let modalContainer = document.getElementById(id)
+    const modalContainer = document.getElementById(id)
     modalContainer.style.display = 'none'
     setTimeout(() => {
 
