@@ -7,15 +7,11 @@
     <title>Santa Fe IPS</title>
     <link rel="stylesheet" href="styles/contact-styles.css">
     <script src="./javascript/contact-logic.js"></script>
+    <script src="./javascript/component/navbarBehavior.js"></script>
 </head>
 
 <body>
-    <!-- 
-    <nav>
-        <img src="icons/return_back.png" alt="arrow pointing left" onclick="returnToHome()">
-    </nav> -->
-
-    <nav role="nav">
+    <nav role="nav" id="nav">
         <img class="logo" src="icons/icon_santa_fe_ips_small.png" alt="icono Santa Fe ips">
         <div class="menu-button" onclick="toggleMenu()">
             <div></div>
@@ -23,18 +19,16 @@
             <div></div>
         </div>
 
-        <ul class="menu">
-            <li><a class="nav-btn-behavior" href="./index.html#home">Inicio</a></li>
-            <li><a class="nav-btn-behavior" href="./index.html#service">Servicios</a></li>
-            <li><a class="nav-btn-behavior" href="./index.html#about-us">Sobre Nosotros</a></li>
-            <li><a class="nav-btn-behavior" href="./gallery.html">Galería</a></li>
-            <li><a class="nav-btn-behavior" href="./index.html#contact">Contactar</a></li>
-            <li><a class="nav-btn-behavior" href="https://www.google.com/?client=safari">Conceptos</a></li>
+        <ul class="menu" id="menu">
+            <li><a class="nav-btn-behavior nav-items" href="./index.html#home">Inicio</a></li>
+            <li><a class="nav-btn-behavior nav-items" href="./index.html#service">Servicios</a></li>
+            <li><a class="nav-btn-behavior nav-items" href="./index.html#about-us">Sobre Nosotros</a></li>
+            <li><a class="nav-btn-behavior nav-items" href="./gallery.html">Galería</a></li>
+            <li><a class="nav-btn-behavior nav-items" href="./index.html#contact">Contactar</a></li>
+            <li><a class="nav-btn-behavior nav-items"
+                    href="http://181.60.60.15/Medicalrips/DescargasEnLinea/loConceptoEmpresas.aspx">Conceptos</a></li>
         </ul>
-
     </nav>
-
-
     <section class="contact">
 
         <div class="contact__title">
@@ -79,7 +73,8 @@
 
             <div class="form__item">
                 <label for="description">Descripción:</label>
-                <textarea name="description" id="description" cols="30" rows="10" placeholder="Descripción..."></textarea>
+                <textarea name="description" id="description" cols="30" rows="10"
+                    placeholder="Descripción..."></textarea>
             </div>
 
             <div class="form__item">

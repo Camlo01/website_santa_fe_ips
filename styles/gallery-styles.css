@@ -1,6 +1,10 @@
 :root {
-    --ligth-blue: #049FDC;
-    --white: #f1f1f1;
+    --primary-blue: rgb(45, 45, 203);
+    --second-blue: rgb(66 107 176);
+    --ligth-blue: rgb(16, 75, 176);
+    --unused-blue: #049FDC;
+
+    --white: #fff;
 }
 
 * {
@@ -14,5 +18,162 @@
 html {
     font-size: 62.5%;
     font-family: "DM Sans", sans-serif;
-    background-color: var(--ligth-blue);
+    background-color: var(--white);
+}
+
+/** ESTILOS NAVBAR */
+header {
+    height: 65px;
+}
+
+nav {
+
+    /* background-color: var(--unused-blue); */
+    /* background: linear-gradient(0deg, rgba(0, 121, 168, 1) 0%, rgba(2, 142, 196, 1) 5%, rgba(4, 159, 220, 1) 12%, rgba(4, 159, 220, 1) 85%, rgba(2, 142, 196, 1) 93%, rgba(0, 121, 168, 1) 100%); */
+    min-height: 65px;
+    position: fixed;
+    width: 100vw;
+    box-shadow: 2px 4px 7px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 4px 7px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 4px 7px -1px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background .5s ease;
+}
+
+.logo {
+    /* width: 120px; */
+    height: 50px;
+    margin: 0 20px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    display: inline;
+    color: var(--white);
+    padding: 21px 0;
+}
+
+.menu li a {
+    font-weight: 800;
+    color: inherit;
+    text-decoration: none;
+    text-shadow: -1px 1px 4px rgba(0, 0, 0, 0.18);
+    font-size: 1.8rem;
+    background-color: inherit;
+    padding: 21px;
+    transition: all 0.4s ease;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.48);
+}
+
+.menu li a:hover {
+    -webkit-text-stroke: 1px rgb(212, 212, 212);
+    /* Grosor y color del borde para navegadores basados en WebKit (como Chrome, Safari) */
+    text-shadow: 2px 3px 13px rgba(0, 0, 0, 1);
+    border: #049FDC;
+}
+
+.menu li:last-child {
+
+    /* background-color: rgb(0, 0, 192); */
+    color: white;
+    margin-right: 35px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+
+    .menu li {
+        margin: 0;
+        text-align: center;
+        border: .5px solid var(--unused-blue);
+        display: flex;
+        padding: inherit;
+    }
+
+    .menu li a {
+        padding: inherit;
+        width: 100%;
+        font-size: 1.8rem;
+        color: var(--white);
+        text-decoration: none;
+        background-color: var(--ligth-blue);
+        padding: 10px;
+    }
+
+    .menu li a:active {
+        background-color: rgb(32, 107, 237);
+        text-shadow: inherit;
+    }
+
+}
+
+.menu-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 0 25px;
+}
+
+.menu-button div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+
+    .menu-button {
+        display: flex;
+    }
+
+    .menu li:last-child {
+        margin-right: 0px;
+    }
+
+}
+
+/* fin navbar styles */
+
+main {
+    padding-top: 20px;
+}
+
+.main__title {
+    width: fit-content;
+    margin-left: 8vw;
+    margin-bottom: 20px;
+}
+
+.main__title h1 {
+    font-size: 2.8rem;
+}
+
+.main__title p {
+    font-size: 2rem;
+}
+
+.gallery__container {
+    background-color: gray;
+    height: 300px;
 }

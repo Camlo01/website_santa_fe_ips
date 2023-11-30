@@ -6,14 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santa Fe IPS</title>
     <link rel="stylesheet" href="styles/gallery-styles.css">
+    <script src="./javascript/component/navbarBehavior.js"></script>
 </head>
 
 <body>
 
-    <section>
-        <a href="./index.html">Regresar al sitio web</a>
+    <header>
+        <nav role="nav" id="nav">
+            <img class="logo" src="icons/icon_santa_fe_ips_small.png" alt="icono Santa Fe ips">
+            <div class="menu-button" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
 
-    </section>
+            <ul class="menu" id="menu">
+                <li><a class="nav-btn-behavior nav-items" href="./index.html#home">Inicio</a></li>
+                <li><a class="nav-btn-behavior nav-items" href="./index.html#service">Servicios</a></li>
+                <li><a class="nav-btn-behavior nav-items" href="./index.html#about-us">Sobre Nosotros</a></li>
+                <li><a class="nav-btn-behavior nav-items" href="./gallery.html">Galería</a></li>
+                <li><a class="nav-btn-behavior nav-items" href="./index.html#contact">Contactar</a></li>
+                <li><a class="nav-btn-behavior nav-items"
+                        href="http://181.60.60.15/Medicalrips/DescargasEnLinea/loConceptoEmpresas.aspx">Conceptos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="main__title">
+            <h1>Galería de imágenes</h1>
+            <p>Imágenes sobre nuestro servicios</p>
+        </div>
+
+        <section class="gallery__container">
+
+        </section>
+
+    </main>
 
 
 </body>

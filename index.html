@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santa Fe IPS</title>
     <meta name="description" content="Clínica especializada en atención médica">
-    <meta name="keywords" content="salud, ips, medicina">
+    <meta name="keywords" content="salud, ips, medicina, villavicencio">
     <link rel="stylesheet" href="styles/index-styles.css">
     <script src="./javascript/index-logic.js"></script>
+    <script src="./javascript/component/navbarBehavior.js"></script>
 </head>
 
 <body>
     <header class="header" id="home">
 
-        <nav role="nav">
+        <nav role="nav" id="nav">
             <img class="logo" src="icons/icon_santa_fe_ips_small.png" alt="icono Santa Fe ips">
             <div class="menu-button" onclick="toggleMenu()">
                 <div></div>
@@ -22,19 +23,21 @@
                 <div></div>
             </div>
 
-            <ul class="menu">
-                <li><a class="nav-btn-behavior" href="#home">Inicio</a></li>
-                <li><a class="nav-btn-behavior" href="#service">Servicios</a></li>
-                <li><a class="nav-btn-behavior" href="#about-us">Sobre Nosotros</a></li>
-                <li><a class="nav-btn-behavior" href="./gallery.html">Galería</a></li>
-                <li><a class="nav-btn-behavior" href="#contact">Contactar</a></li>
-                <li><a class="nav-btn-behavior" href="https://www.google.com/?client=safari">Conceptos</a></li>
+            <ul class="menu" id="menu">
+                <li><a class="nav-btn-behavior nav-items" href="./index.html#home">Inicio</a></li>
+                <li><a class="nav-btn-behavior nav-items" href="./index.html#service">Servicios</a></li>
+                <li><a class="nav-btn-behavior nav-items" href="./index.html#about-us">Sobre Nosotros</a></li>
+                <li><a class="nav-btn-behavior nav-items" href="./gallery.html">Galería</a></li>
+                <li><a class="nav-btn-behavior nav-items" href="./index.html#contact">Contactar</a></li>
+                <li><a class="nav-btn-behavior nav-items"
+                        href="http://181.60.60.15/Medicalrips/DescargasEnLinea/loConceptoEmpresas.aspx">Conceptos</a>
+                </li>
             </ul>
 
         </nav>
 
         <!-- Imagen de portada -->
-        <section class="portada">
+        <section class="portada" id="portada">
 
             <div class="portada__title">
                 <h1>Santa Fé IPS</h1>
