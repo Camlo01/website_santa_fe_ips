@@ -7,6 +7,7 @@
     <title>Santa Fe IPS</title>
     <link rel="stylesheet" href="styles/gallery-styles.css">
     <script src="./javascript/component/navbarBehavior.js"></script>
+    <script src="./javascript/gallery-logic.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
                 <li><a class="nav-btn-behavior nav-items" href="./index.html#about-us">Sobre Nosotros</a></li>
                 <li><a class="nav-btn-behavior nav-items" href="./gallery.html">Galería</a></li>
                 <li><a class="nav-btn-behavior nav-items" href="./index.html#contact">Contactar</a></li>
-                <li><a class="nav-btn-behavior nav-items"
+                <li><a class="nav-btn-behavior nav-items" target="_blank"
                         href="http://181.60.60.15/Medicalrips/DescargasEnLinea/loConceptoEmpresas.aspx">Conceptos</a>
                 </li>
             </ul>
@@ -40,8 +41,132 @@
             <p>Imágenes sobre nuestro servicios</p>
         </div>
 
-        <section class="gallery__container">
+        <section class="gallery">
+            <div class="gallery__container">
+                <div class="carrousel">
 
+                    <div class="photo-card" onclick="openModal('modal-photo-1')">
+                        <img src="./images/gallery/photo_1.jpg" alt="Foto de la galería">
+                    </div>
+                    <div class="photo-modal" id="modal-photo-1" onclick="closeModal('modal-photo-1')">
+                        <div class="photo-button">
+                            <img src="./icons/icone-close-white.php.png" alt="icon close modal">
+                        </div>
+                        <div class="photo-container" onclick="event.stopPropagation()">
+                            <img src="./images/gallery/photo_1.jpg" alt="Foto de la galería">
+                        </div>
+                    </div>
+
+                    <div class="photo-card" onclick="openModal('modal-photo-2')">
+                        <img src="./images/gallery/photo_2.jpg" alt="Foto de la galería">
+                    </div>
+                    <div class="photo-modal" id="modal-photo-2" onclick="closeModal('modal-photo-2')">
+                        <div class="photo-button">
+                            <img src="./icons/icone-close-white.php.png" alt="icon close modal">
+                        </div>
+                        <div class="photo-container" onclick="event.stopPropagation()">
+                            <img src="./images/gallery/photo_2.jpg" alt="Foto de la galería">
+                        </div>
+                    </div>
+
+                    <div class="photo-card" onclick="openModal('modal-photo-3')">
+                        <img src="./images/gallery/photo_3.jpg" alt="Foto de la galería">
+                    </div>
+                    <div class="photo-modal" id="modal-photo-3" onclick="closeModal('modal-photo-3')">
+                        <div class="photo-button">
+                            <img src="./icons/icone-close-white.php.png" alt="icon close modal">
+                        </div>
+                        <div class="photo-container" onclick="event.stopPropagation()">
+                            <img src="./images/gallery/photo_3.jpg" alt="Foto de la galería">
+                        </div>
+                    </div>
+
+                    <div class="photo-card" onclick="openModal('modal-photo-4')">
+                        <img src="./images/gallery/photo_4.jpg" alt="Foto de la galería">
+                    </div>
+                    <div class="photo-modal" id="modal-photo-4" onclick="closeModal('modal-photo-4')">
+                        <div class="photo-button">
+                            <img src="./icons/icone-close-white.php.png" alt="icon close modal">
+                        </div>
+                        <div class="photo-container" onclick="event.stopPropagation()">
+                            <img src="./images/gallery/photo_4.jpg" alt="Foto de la galería">
+                        </div>
+                    </div>
+
+                    <div class="photo-card" onclick="openModal('modal-photo-5')">
+                        <img src="./images/gallery/photo_5.jpg" alt="Foto de la galería">
+                    </div>
+                    <div class="photo-modal" id="modal-photo-5" onclick="closeModal('modal-photo-5')">
+                        <div class="photo-button">
+                            <img src="./icons/icone-close-white.php.png" alt="icon close modal">
+                        </div>
+                        <div class="photo-container" onclick="event.stopPropagation()">
+                            <img src="./images/gallery/photo_5.jpg" alt="Foto de la galería">
+                        </div>
+                    </div>
+
+                    <div class="photo-card" onclick="openModal('modal-photo-6')">
+                        <img src="./images/gallery/photo_6.jpg" alt="Foto de la galería">
+                    </div>
+                    <div class="photo-modal" id="modal-photo-6" onclick="closeModal('modal-photo-6')">
+                        <div class="photo-button">
+                            <img src="./icons/icone-close-white.php.png" alt="icon close modal">
+                        </div>
+                        <div class="photo-container" onclick="event.stopPropagation()">
+                            <img src="./images/gallery/photo_6.jpg" alt="Foto de la galería">
+                        </div>
+                    </div>
+
+                    <div class="photo-card" onclick="openModal('modal-photo-7')">
+                        <img src="./images/gallery/photo_7.jpg" alt="Foto de la galería">
+                    </div>
+                    <div class="photo-modal" id="modal-photo-7" onclick="closeModal('modal-photo-7')">
+                        <div class="photo-button">
+                            <img src="./icons/icone-close-white.php.png" alt="icon close modal">
+                        </div>
+                        <div class="photo-container" onclick="event.stopPropagation()">
+                            <img src="./images/gallery/photo_7.jpg" alt="Foto de la galería">
+                        </div>
+                    </div>
+
+                    <div class="photo-card" onclick="openModal('modal-photo-8')">
+                        <img src="./images/gallery/photo_8.jpg" alt="Foto de la galería">
+                    </div>
+                    <div class="photo-modal" id="modal-photo-8" onclick="closeModal('modal-photo-8')">
+                        <div class="photo-button">
+                            <img src="./icons/icone-close-white.php.png" alt="icon close modal">
+                        </div>
+                        <div class="photo-container" onclick="event.stopPropagation()">
+                            <img src="./images/gallery/photo_8.jpg" alt="Foto de la galería">
+                        </div>
+                    </div>
+
+                    <div class="photo-card" onclick="openModal('modal-photo-9')">
+                        <img src="./images/gallery/photo_9.jpg" alt="Foto de la galería">
+                    </div>
+                    <div class="photo-modal" id="modal-photo-9" onclick="closeModal('modal-photo-9')">
+                        <div class="photo-button">
+                            <img src="./icons/icone-close-white.php.png" alt="icon close modal">
+                        </div>
+                        <div class="photo-container" onclick="event.stopPropagation()">
+                            <img src="./images/gallery/photo_9.jpg" alt="Foto de la galería">
+                        </div>
+                    </div>
+
+                    <div class="photo-card" onclick="openModal('modal-photo-10')">
+                        <img src="./images/gallery/photo_10.jpg" alt="Foto de la galería">
+                    </div>
+                    <div class="photo-modal" id="modal-photo-10" onclick="closeModal('modal-photo-10')">
+                        <div class="photo-button">
+                            <img src="./icons/icone-close-white.php.png" alt="icon close modal">
+                        </div>
+                        <div class="photo-container" onclick="event.stopPropagation()">
+                            <img src="./images/gallery/photo_10.jpg" alt="Foto de la galería">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
     </main>

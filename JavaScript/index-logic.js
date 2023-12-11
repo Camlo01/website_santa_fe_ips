@@ -39,12 +39,3 @@ function closeModal(id) {
 
     modalContainer.querySelector('div').style.top = '-100%'
 }
-
-/**
- * Add functionality for open PQR page in a new tab
- */
-function openPQRPage() {
-    // Abrir una nueva página en una nueva ventana o pestaña
-    window.open("../contact.html", "_blank");
-
-}
